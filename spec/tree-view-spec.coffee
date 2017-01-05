@@ -2587,7 +2587,7 @@ describe "TreeView", ->
 
         expect(lambdaEntries).toEqual(["iota", "kappa"])
 
-      describe "when a squashed directory is deleted", ->
+      describe "when a squashed directory is deleted inside tree-view", ->
         it "un-squashes the directories", ->
           jasmine.attachToDOM(workspaceElement)
           piDir = $(treeView.roots[0].entries).find(".directory:contains(omicron#{path.sep}pi):first")[0]
@@ -2600,7 +2600,7 @@ describe "TreeView", ->
           omicronDir = $(treeView.roots[0].entries).find(".directory:contains(omicron):first span")[0]
           expect(omicronDir.title).toEqual("omicron")
 
-      describe "when a file is created within a directory with another squashed directory", ->
+      describe "when a file is created within a directory with another squashed directory inside tree-view", ->
         it "un-squashes the directories", ->
           jasmine.attachToDOM(workspaceElement)
           piDir = $(treeView.roots[0].entries).find(".directory:contains(omicron#{path.sep}pi):first")[0]
@@ -2619,7 +2619,7 @@ describe "TreeView", ->
           sigmaFile = $(treeView.roots[0].entries).find(".directory:contains(omicron) .entries .file:contains(sigma) span")[0]
           expect(sigmaFile.title).toEqual("sigma.txt")
 
-      describe "when a directory is created within a directory with another squashed directory", ->
+      describe "when a directory is created within a directory with another squashed directory inside tree-view", ->
         it "un-squashes the directories", ->
           jasmine.attachToDOM(workspaceElement)
           piDir = $(treeView.roots[0].entries).find(".directory:contains(omicron#{path.sep}pi):first")[0]
