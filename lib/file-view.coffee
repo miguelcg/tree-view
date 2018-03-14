@@ -20,6 +20,12 @@ class FileView
     @fileName.dataset.name = @file.name
     @fileName.dataset.path = @file.path
 
+    @fileSize = document.createElement('span')
+    @fileSize.classList.add('size')
+    @fileName.appendChild(@fileSize)
+    @fileSize.textContent = @file.stats.size
+    @fileSize.title = @file.stats.size
+
     iconClass = FileIcons.getService().iconClassForPath(@file.path, "tree-view")
     if iconClass
       unless Array.isArray iconClass

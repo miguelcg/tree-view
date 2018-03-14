@@ -57,6 +57,23 @@
       content: '';
       position: absolute;
     }
+
+    .size {
+
+      &::before {
+        content: '(';
+      }
+
+      &::after {
+        content: ' Bytes)';
+      }
+
+      margin-left: @component-icon-padding;
+      font-style: italic;
+      color: @text-color-subtle;
+      font-size: @font-size;
+      font: @font-family;
+    }
   }
 
   /* Drag and Drop */
